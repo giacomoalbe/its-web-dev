@@ -11,49 +11,65 @@
         Ci sono {{ cars.length }} macchine in questa lista.
       </h2>
     </div>
+    <div class="flex px-3 py-2">
+      <input
+        placeholder="Cerca una macchina, ce ne sono tante... Poi te ne restano 1000"
+        type="text"
+        @input="updateFilter($event)"
+        class="flex-grow p-2 border rounded"
+      />
+    </div>
     <div class="flex flex-col mx-2">
-      <div
-        v-for="(car, index) in cars"
-        :key="index"
-        class="grid grid-cols-3 bg-white px-5 py-3 mb-3"
-      >
-        <div class="col-span-3 mb-3 flex items-center">
-          {{ car.model.brand }} {{ car.model.name }}
-          <div
-            v-if="car.green"
-            class="ml-2 bg-green-200 text-green-900 rounded px-2 py-1 text-xs"
-          >
-            Green
-          </div>
-          <div class="ml-auto text-green-600 font-bold">{{ car.price }} €</div>
-        </div>
-        <div class="">
-          <img :src="car.img" alt="" />
-        </div>
-        <div class="col-span-2 flex flex-col ml-3 text-sm justify-between">
-          <div class="flex items-center border-b border-gray-200">
-            <label for="">Chilometraggio</label>
-            <span class="ml-auto">{{ car.mileage }}km</span>
-          </div>
-          <div class="flex items-center border-b border-gray-200">
-            <label for="">Alimentazione</label>
-            <span class="ml-auto">{{ car.fuel_type }}</span>
-          </div>
-          <div class="flex items-center border-b border-gray-200">
-            <label for="">Potenza</label>
-            <span class="ml-auto"
-              >{{ car.power_cv }} CV ({{ car.power_kw }}kw)</span
+      <div v-for="(car, index) in filteredCars" :key="index">
+        <div
+          class="grid grid-cols-3 bg-white p-5 mb-3"
+          v-if="!query || query.toLowerCase() == car.model.brand.toLowerCase()"
+        >
+          <div class="col-span-3 mb-3 flex items-center">
+            {{ car.model.brand }} {{ car.model.name }}
+            <div
+              v-if="car.green"
+              class="ml-2 bg-green-200 text-green-900 rounded px-2 py-1 text-xs"
             >
+              Green
+            </div>
+            <button @click="showAlert(index, car, car.model, 13, 'canino')">
+              Click me b***h!
+            </button>
+            <div class="ml-auto text-green-600 font-bold">
+              {{ car.price }} €
+            </div>
           </div>
-          <div class="flex items-center border-b border-gray-200">
-            <label for="">Trasmissione</label>
-            <span class="ml-auto">{{ car.transmission_type }}</span>
+          <div class="">
+            <img :src="car.img" alt="" />
           </div>
-          <div class="flex items-center border-b border-gray-200">
-            <label for="">Immatricolazione</label>
-            <span class="ml-auto"
-              >{{ car.matriculation.month }}/{{ car.matriculation.year }}</span
-            >
+          <div class="col-span-2 flex flex-col ml-3 text-sm justify-between">
+            <div class="flex items-center border-b border-gray-200">
+              <label for="">Chilometraggio</label>
+              <span class="ml-auto">{{ car.mileage }}km</span>
+            </div>
+            <div class="flex items-center border-b border-gray-200">
+              <label for="">Alimentazione</label>
+              <span class="ml-auto">{{ car.fuel_type }}</span>
+            </div>
+            <div class="flex items-center border-b border-gray-200">
+              <label for="">Potenza</label>
+              <span class="ml-auto"
+                >{{ car.power_cv }} CV ({{ car.power_kw }}kw)</span
+              >
+            </div>
+            <div class="flex items-center border-b border-gray-200">
+              <label for="">Trasmissione</label>
+              <span class="ml-auto">{{ car.transmission_type }}</span>
+            </div>
+            <div class="flex items-center border-b border-gray-200">
+              <label for="">Immatricolazione</label>
+              <span class="ml-auto"
+                >{{ car.matriculation.month }}/{{
+                  car.matriculation.year
+                }}</span
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -64,6 +80,8 @@
 export default {
   data() {
     return {
+      query: "",
+      filteredCars: [],
       cars: [
         {
           img:
@@ -143,6 +161,42 @@ export default {
 
     test();
     console.log("Prova: " + prova);
+
+    this.filteredCars = this.cars;
+  },
+  methods: {
+    updateFilter(event) {
+      let query = event.target.value;
+
+      if (query == "") {
+        this.filteredCars = this.cars;
+        return;
+      }
+
+      let filteredCars = this.cars.filter(car => {
+        if (query.toLowerCase() == car.model.brand.toLowerCase()) {
+          return true;
+        }
+
+        return false;
+      });
+
+      this.filteredCars = filteredCars;
+    },
+    showAlert(
+      index,
+      car,
+      model,
+      howCool,
+      bestStudentEver = "ale XD",
+      worstStudentEver = "canino"
+    ) {
+      alert("La macchina si chiama: " + car.model.name);
+      console.log(model);
+      console.log(howCool);
+      console.log(bestStudentEver);
+      console.log(worstStudentEver);
+    }
   }
 };
 </script>
