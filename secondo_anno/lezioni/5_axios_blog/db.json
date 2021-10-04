@@ -1,0 +1,32 @@
+{
+    "posts": [{
+            "id": 1,
+            "title": "Chievo in serie A? Fra qualche anno",
+            "brief": "Dopo il problema fiscale, ecco che si riparte: colpa del Covid? Probabilmente",
+            "body": "Elit facilis tempora reprehenderit sint nostrum Sint maxime laudantium rem voluptate sit ipsum, autem Accusamus rerum molestiae mollitia eum reprehenderit Facilis magni reprehenderit odit qui est Nihil voluptas id magnam!",
+            "author": "Canino"
+        },
+        {
+            "id": 2,
+            "title": "Chievo in serie B? Fra qualche anno",
+            "brief": "Dopo il problema fiscale, ecco che si riparte: colpa del Covid? Probabilmente",
+            "body": "Elit facilis tempora reprehenderit sint nostrum Sint maxime laudantium rem voluptate sit ipsum, autem Accusamus rerum molestiae mollitia eum reprehenderit Facilis magni reprehenderit odit qui est Nihil voluptas id magnam!",
+            "author": "Canino"
+        },
+        {
+            "id": 3,
+            "title": "Chievo in serie C? Fra qualche anno",
+            "brief": "Dopo il problema fiscale, ecco che si riparte: colpa del Covid? Probabilmente",
+            "body": "Elit facilis tempora reprehenderit sint nostrum Sint maxime laudantium rem voluptate sit ipsum, autem Accusamus rerum molestiae mollitia eum reprehenderit Facilis magni reprehenderit odit qui est Nihil voluptas id magnam!",
+            "author": "Canino"
+        }
+    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}
