@@ -1,0 +1,151 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "img": "https://www.pescaloccasione.it/image/data/blog/tecniche%20di%20pesca/pesca%20a%20spinning/pesca%20spinning%20in%20mare.jpg",
+      "model": {
+        "brand": "Toyota",
+        "name": "Auris Hybrid"
+      },
+      "green": true,
+      "price": 12900,
+      "cilindrata": 1400,
+      "mileage": 93000,
+      "fuel_type": "benzina",
+      "power_cv": 136,
+      "power_kw": 100,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 2015
+      },
+      "description": "Uè Uagliò bella sta macchinetta"
+    },
+    {
+      "id": 2,
+      "img": "https://prod.pictures.autoscout24.net/listing-images/48e250cc-89da-496d-a5ec-556bc35b0fa0_9d7cdebe-a928-4c94-ad29-79abf972b0c4.jpg/420x315.jpg",
+      "model": {
+        "brand": "Tesla",
+        "name": "Model 3"
+      },
+      "green": true,
+      "price": 41000,
+      "cilindrata": 0,
+      "mileage": 41000,
+      "fuel_type": "elettrico",
+      "power_cv": 208,
+      "power_kw": 153,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 2019
+      },
+      "description": "Spacca sta macchinetta"
+    },
+    {
+      "id": 3,
+      "img": "https://prod.pictures.autoscout24.net/listing-images/dfa52485-4342-487e-85f3-1bf8221d11ae_c521573b-41fb-4c19-abbf-1df2a4a15d59.jpg/420x315.jpg",
+      "model": {
+        "brand": "Fiat",
+        "name": "Panda Young"
+      },
+      "green": false,
+      "price": 1490,
+      "cilindrata": 1400,
+      "mileage": 237000,
+      "fuel_type": "benzina",
+      "power_cv": 54,
+      "power_kw": 40,
+      "transmission_type": "manuale",
+      "matriculation": {
+        "month": 5,
+        "year": 2002
+      },
+      "description": "Er Pandarmato"
+    },
+    {
+      "img": "",
+      "model": {
+        "brand": "Canino",
+        "name": "Canoni"
+      },
+      "green": true,
+      "price": "1500",
+      "cilindrata": 0,
+      "mileage": 0,
+      "fuel_type": "benzina",
+      "power_cv": 0,
+      "power_kw": 0,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 1900
+      },
+      "description": "Lorem non architecto adipisci lorem accusamus. Dolorum rerum corporis alias dignissimos officia eos? Repellat nesciunt vitae laborum delectus ullam debitis. Possimus dolor at excepturi rem beatae? Ad possimus alias et",
+      "id": 4
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/T34-76_4.jpg/1200px-T34-76_4.jpg",
+      "model": {
+        "brand": "Canino",
+        "name": "Canoni"
+      },
+      "green": false,
+      "price": 0,
+      "cilindrata": 0,
+      "mileage": 0,
+      "fuel_type": "benzina",
+      "power_cv": 0,
+      "power_kw": 0,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 1900
+      },
+      "description": "Lorem non architecto adipisci lorem accusamus. Dolorum rerum corporis alias dignissimos officia eos? Repellat nesciunt vitae laborum delectus ullam debitis. Possimus dolor at excepturi rem beatae? Ad possimus alias et",
+      "id": 5
+    },
+    {
+      "img": "",
+      "model": {
+        "brand": "Canino",
+        "name": "Canoni"
+      },
+      "green": false,
+      "price": 0,
+      "cilindrata": 0,
+      "mileage": 0,
+      "fuel_type": "benzina",
+      "power_cv": 0,
+      "power_kw": 0,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 1900
+      },
+      "description": "Lorem non architecto adipisci lorem accusamus. Dolorum rerum corporis alias dignissimos officia eos? Repellat nesciunt vitae laborum delectus ullam debitis. Possimus dolor at excepturi rem beatae? Ad possimus alias et",
+      "id": 6
+    },
+    {
+      "img": "",
+      "model": {
+        "brand": "Canino",
+        "name": "Canoni"
+      },
+      "green": false,
+      "price": 0,
+      "cilindrata": 0,
+      "mileage": 0,
+      "fuel_type": "benzina",
+      "power_cv": 0,
+      "power_kw": 0,
+      "transmission_type": "automatico",
+      "matriculation": {
+        "month": 1,
+        "year": 1900
+      },
+      "description": "Lorem non architecto adipisci lorem accusamus. Dolorum rerum corporis alias dignissimos officia eos? Repellat nesciunt vitae laborum delectus ullam debitis. Possimus dolor at excepturi rem beatae? Ad possimus alias et",
+      "id": 7
+    }
+  ]
+}
