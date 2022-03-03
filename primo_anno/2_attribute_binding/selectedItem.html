@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectedItem</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+    <div id="app">
+        <button v-for="(button, index) in buttons" :key="index" :class="isButtonSelected(button.code)" @click="selectButton(button.code)">
+            {{ button.label }} {{ button.icon }}
+        </button>
+
+        <h1>Hai cliccato su Bottone {{ selectedButton }}</h1>
+
+        <div v-if="selectedButton == 'activate_dsnf'">
+            Programma di sviluppo nucleare attivato!
+        </div>
+        <div v-else-if="selectedButton == 'pause_dsnf'">
+            Programma di sviluppo nucleare in pausa!
+        </div>
+        <div v-else-if="selectedButton == 'stop_dnsf'">
+            Programma di sviluppo nucleare stoppato!
+        </div>
+        <div v-else-if="selectedButton == 'conquer_world'">
+            Unexpected error: nuclear power not deployed
+        </div>
+        <div v-else>
+            🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
+        </div>
+    </div>
+
+    <script src="./selectedItem.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

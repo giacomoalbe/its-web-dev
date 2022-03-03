@@ -21,3 +21,7 @@ button[disabled] {
 .error {
     border-color: red;
 }
+
+.selected {
+    background-color: lime;
+}
