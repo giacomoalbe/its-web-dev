@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Manipulation</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <button @click="hello()">Click me, you M*************r!</button>
+
+        <input type="text" v-model="password">
+
+        <div v-if="password.length >= 8">La password contiene più di 8 caratteri</div>
+        <div v-else>La password contiene meno di 8 caratteri</div>
+
+
+        <div>
+            <!-- <input type="number" v-model="dado"> -->
+            <h1>
+                {{ dado }}
+            </h1>
+            <button @click="tirTheDad()">Tira il dado</button>
+
+            <div v-if="dado == 1">Numero 1</div>
+            <div v-else-if="dado == 2">Numero 2</div>
+            <div v-else-if="dado == 3">Numero 3</div>
+            <div v-else-if="dado == 4">Numero 4</div>
+            <div v-else-if="dado == 5">Numero 5</div>
+            <div v-else-if="dado == 6">Numero 6</div>
+            <div v-else>Inserisci un numero tra 1 e 6</div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="script.js">
+    </script>
+</body>
+
+</html>

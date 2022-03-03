@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <input type="text" @input="cambia">
+            <button @click="saluta()">Saluta</button>
+            <button @click="cambiaMaNoLaComputed()">Sfondami</button>
+        </div>
+        <h1>
+            {{ salutone }}
+        </h1>
+
+
+        <div>
+            <input type="test" v-model="nome">
+            <h1>{{ senzaVocali }}</h1>
+            <h2>Quante lettere ci sono in quell'input bro: {{ inputLength }}</h2>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                persona: "",
+                vattelapesca: "",
+                nome: "",
+            },
+            methods: {
+                saluta() {
+                    this.persona = this.vattelapesca;
+                },
+                cambiaMaNoLaComputed() {
+                    this.vattelapesca = "Berlusoni";
+                },
+                cambia(e) {
+                    this.vattelapesca = e.target.value;
+                }
+            },
+            computed: {
+                salutone() {
+                    console.log("Ricalcolo la computed");
+                    return "Ciao, " + this.persona + "!";
+                },
+                senzaVocali() {
+                    console.log("Sto cambiando la computed");
+                    let nomeUC = this.nome.toUpperCase();
+                    console.log(nomeUC);
+                    let nomeUCNoVC = nomeUC
+                        .replace(/[aeiou]/ig, '');
+
+                    return nomeUCNoVC;
+                },
+                inputLength() {
+                    return this.nome.length;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

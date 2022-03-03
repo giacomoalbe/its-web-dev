@@ -1,0 +1,23 @@
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.fruing {
+    background-color: #493321;
+}
+
+input {
+    outline: none;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}
+
+.error {
+    border-color: red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+    <div id="app">
+        <input :class="{
+            'error': !isPasswordValid 
+        }" type="text" v-model="password">
+        <button :disabled="!isPasswordValid">Invia</button>
+
+        <h2>One way data binding (controller -> view)</h2>
+        <h3>Attribute binding</h3>
+        <input type="text" v-model="bgColor">
+        <input type="text" v-model="imgUrl">
+        <div :class="bgColor" class="fruing">Colore {{ bgColor }}</div>
+        <img :src="imgUrl" width="300" height="300" />
+
+        <h2>One way data binding (controller -> view)</h2>
+        <h3>Interpolation</h3>
+        <div>{{ message }}</div>
+
+        <h2>One way data binding (view -> controller)</h2>
+        <input type="text" @input="onInputChange">
+        <div>Testo dell'input {{ newText }}</div>
+        <button @click="clearText()">Clear newText</button>
+
+
+        <h1>Two way data binding</h1>
+        <input type="text" v-model="message">
+    </div>
+
+    <script src="./script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
